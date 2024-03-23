@@ -43,8 +43,7 @@ public class Person implements Comparable<Person> {
     public int hashCode() {
         
         // Implement hash function here.
-        String fullName = firstName + lastName;
-        return fullName.hashCode();
+        return getFullName().hashCode();
        
     }
 

@@ -42,7 +42,7 @@ public class KeyValueHashTable<K extends Comparable<K>, V> implements Dictionary
     @Override
     public int size() {
         // TODO: Implement this.
-        return 0;
+        return count;
     }
 
     /**
@@ -74,16 +74,50 @@ public class KeyValueHashTable<K extends Comparable<K>, V> implements Dictionary
         // Remeber to check for null values.
 
         // Checks if the LOAD_FACTOR has been exceeded --> if so, reallocates to a bigger hashtable.
+        if(key==null||value==null)
+        {
+            throw new IllegalArgumentException();
+        }
         if (((double)count * (1.0 + LOAD_FACTOR)) >= values.length) {
             reallocate((int)((double)(values.length) * (1.0 / LOAD_FACTOR)));
         }
+        
+        if(values[Math.abs(key.hashCode())%values.length]==null)
+        {
+             values[Math.abs(key.hashCode())%values.length]=new Pair<K,V>(key, value);
+             count++;
+        }
+        else if(values[Math.abs(key.hashCode())%values.length]!=null&&values[Math.abs(key.hashCode())%values.length].getKey().equals(key))
+        {
+            values[Math.abs(key.hashCode())%values.length].setValue(value);
+        }
+        
+        else if(values[Math.abs(key.hashCode())%values.length]!=null&&!values[Math.abs(key.hashCode())%values.length].getKey().equals(key))
+        {
+            for(int i=Math.abs(key.hashCode())%values.length+1;i<values.length;i++)
+            {
+               if(values[i]==null)
+               {
+                values[i]=new Pair<K,V>(key, value);
+                count++;
+                er=false;
+                break;
+               }
+            }
+            if (er) {
+                reallocate((int)((double)(values.length) * (1.0 / LOAD_FACTOR)));
+                add(key,value);
+            }
+            er=true;
+        }
+        return true;
         // Remember to get the hash key from the Person,
         // hash table computes the index for the Person (based on the hash value),
         // if index was taken by different Person (collision), get new hash and index,
         // insert into table when the index has a null in it,
         // return true if existing Person updated or new Person inserted.
         
-        return false;
+        
     }
 
     @Override
@@ -92,6 +126,34 @@ public class KeyValueHashTable<K extends Comparable<K>, V> implements Dictionary
 
         // Must use same method for computing index as add method
         
+        if(key==null)
+        {
+            throw new IllegalArgumentException();
+        }
+        if(values[Math.abs(key.hashCode())%values.length]==null)
+        {
+            return null;
+        }
+         else
+          {
+             if (key.equals(values[Math.abs(key.hashCode())%values.length].getKey())) {
+        return values[Math.abs(key.hashCode())%values.length].getValue();
+    }
+    else{
+        for(int i=Math.abs(key.hashCode())%values.length+1;i<values.length;i++)
+        {
+            if(values[i]==null){
+                 return null;
+            }
+            else if(key.equals(values[i].getKey()))
+            {
+                return values[i].getValue();
+            }
+        }
+    }
+          }
+          
+        // Must use same method for computing index as add method
         return null;
     }
 
