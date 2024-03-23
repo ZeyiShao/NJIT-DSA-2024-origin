@@ -1,32 +1,39 @@
+
 package oy.tol.tra;
 
-public class Algorithms {
-    public static <T extends Comparable<T>> void sort(T [] array) {
-// implementation here...
 
-        for (int i = 0; i < array.length - 1; i++) {
-            for (int j = 0; j < array.length - i - 1; j++) {
-                if (array[j].compareTo(array[j + 1]) > 0) {
-                    T temp = array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;
+public class Algorithms {
+    public static <T extends Comparable<T>> void sort(T[] array) {
+        int n = array.length;
+        boolean swapped = true;
+
+        while(swapped) {
+            swapped = false;
+            for (int i = 1; i < n; i++) {
+                if (array[i - 1].compareTo(array[i]) > 0) {
+                    swap(array, i - 1, i);
+                    swapped = true;
                 }
             }
         }
     }
 
-// ...
-        public static <T> void reverse(T [] array) {
-// implementation here...
-            int start = 0;
-            int end = array.length - 1;
-            while (start < end) {
-                T temp = array[start];
-                array[start] = array[end];
-                array[end] = temp;
-                start++;
-                end--;
-            }
+    public static <T> void reverse(T[] array) {
+        reverse(array, 0, array.length - 1);
+    }
 
+    private static <T> void reverse(T[] array, int left, int right) {
+        while (left < right) {
+            swap(array, left, right);
+            left++;
+            right--;
         }
+    }
+
+    private static <T> void swap(T[] array, int i, int j) {
+        T temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
 }
+
