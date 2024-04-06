@@ -1,0 +1,38 @@
+-------------------------------------------------------------------------------
+Test set: oy.tol.tira.books.CorrectnessTests
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 1, Errors: 6, Skipped: 0, Time elapsed: 0.041 s <<< FAILURE! - in oy.tol.tira.books.CorrectnessTests
+testSapmiRussianFile  Time elapsed: 0.019 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.net.URL.getFile()" because the return value of "java.lang.ClassLoader.getResource(String)" is null
+	at oy.tol.tira.books.CorrectnessTests.getFullPathToTestFile(CorrectnessTests.java:268)
+	at oy.tol.tira.books.CorrectnessTests.testSapmiRussianFile(CorrectnessTests.java:161)
+
+testSmallFile  Time elapsed: 0.004 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Test failed due to exception: Cannot invoke "java.net.URL.getFile()" because the return value of "java.lang.ClassLoader.getResource(String)" is null
+	at oy.tol.tira.books.CorrectnessTests.testSmallFile(CorrectnessTests.java:153)
+
+testBulkFile  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.net.URL.getFile()" because the return value of "java.lang.ClassLoader.getResource(String)" is null
+	at oy.tol.tira.books.CorrectnessTests.getFullPathToTestFile(CorrectnessTests.java:268)
+	at oy.tol.tira.books.CorrectnessTests.testBulkFile(CorrectnessTests.java:233)
+
+testWarPeaceFile  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.net.URL.getFile()" because the return value of "java.lang.ClassLoader.getResource(String)" is null
+	at oy.tol.tira.books.CorrectnessTests.getFullPathToTestFile(CorrectnessTests.java:268)
+	at oy.tol.tira.books.CorrectnessTests.testWarPeaceFile(CorrectnessTests.java:197)
+
+testEmptyBookFile  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.net.URL.getFile()" because the return value of "java.lang.ClassLoader.getResource(String)" is null
+	at oy.tol.tira.books.CorrectnessTests.getFullPathToTestFile(CorrectnessTests.java:268)
+	at oy.tol.tira.books.CorrectnessTests.testEmptyBookFile(CorrectnessTests.java:44)
+
+testTinyBookFile  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.net.URL.getFile()" because the return value of "java.lang.ClassLoader.getResource(String)" is null
+	at oy.tol.tira.books.CorrectnessTests.getFullPathToTestFile(CorrectnessTests.java:268)
+	at oy.tol.tira.books.CorrectnessTests.testTinyBookFile(CorrectnessTests.java:98)
+
+testOneWordBookFile  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.net.URL.getFile()" because the return value of "java.lang.ClassLoader.getResource(String)" is null
+	at oy.tol.tira.books.CorrectnessTests.getFullPathToTestFile(CorrectnessTests.java:268)
+	at oy.tol.tira.books.CorrectnessTests.testOneWordBookFile(CorrectnessTests.java:66)
+

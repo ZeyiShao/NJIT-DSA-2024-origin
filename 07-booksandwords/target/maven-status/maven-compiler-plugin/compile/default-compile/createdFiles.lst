@@ -1,0 +1,10 @@
+oy\tol\tira\books\gui\BooksAndWordsGUI.class
+oy\tol\tira\books\BadBookImplementation.class
+oy\tol\tira\books\BadBookImplementation$WordCount.class
+oy\tol\tira\books\gui\BooksAndWordsGUI$ResizeListener.class
+oy\tol\tira\books\gui\ControlPanel.class
+oy\tol\tira\books\gui\ResultsPanel.class
+oy\tol\tira\books\WordFilter.class
+oy\tol\tira\books\BookFactory.class
+oy\tol\tira\books\Book.class
+oy\tol\tira\books\BooksAndWords.class

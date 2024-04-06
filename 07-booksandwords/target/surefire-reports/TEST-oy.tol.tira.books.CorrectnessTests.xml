@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="oy.tol.tira.books.CorrectnessTests" time="0.041" tests="9" errors="6" skipped="0" failures="1">
+  <properties>
+    <property name="java.specification.version" value="19"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.class.path" value="d:\dsa\NJIT-DSA-2024-origin\07-booksandwords\target\test-classes;d:\dsa\NJIT-DSA-2024-origin\07-booksandwords\target\classes;C:\Users\LEGION\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\LEGION\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\LEGION\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\LEGION\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\LEGION\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\LEGION\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;C:\Users\LEGION\.m2\repository\com\kennycason\kumo-core\1.28\kumo-core-1.28.jar;C:\Users\LEGION\.m2\repository\com\kennycason\kumo-api\1.28\kumo-api-1.28.jar;C:\Users\LEGION\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\LEGION\.m2\repository\org\jsoup\jsoup\1.12.1\jsoup-1.12.1.jar;C:\Users\LEGION\.m2\repository\commons-io\commons-io\2.4\commons-io-2.4.jar;C:\Users\LEGION\.m2\repository\org\apache\commons\commons-lang3\3.4\commons-lang3-3.4.jar;C:\Users\LEGION\.m2\repository\com\github\davidmoten\rtree\0.8.6\rtree-0.8.6.jar;C:\Users\LEGION\.m2\repository\com\github\davidmoten\guava-mini\0.1.1\guava-mini-0.1.1.jar;C:\Users\LEGION\.m2\repository\io\reactivex\rxjava\1.3.8\rxjava-1.3.8.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="19"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-19\bin"/>
+    <property name="sun.java.command" value="C:\Users\LEGION\AppData\Local\Temp\surefire9374324729000978871\surefirebooter787073874696689375.jar C:\Users\LEGION\AppData\Local\Temp\surefire9374324729000978871 2024-04-06T20-34-15_116-jvmRun1 surefire14073016208104925459tmp surefire_011088669426537218306tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="d:\dsa\NJIT-DSA-2024-origin\07-booksandwords\target\test-classes;d:\dsa\NJIT-DSA-2024-origin\07-booksandwords\target\classes;C:\Users\LEGION\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\LEGION\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\LEGION\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\LEGION\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\LEGION\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\LEGION\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar;C:\Users\LEGION\.m2\repository\com\kennycason\kumo-core\1.28\kumo-core-1.28.jar;C:\Users\LEGION\.m2\repository\com\kennycason\kumo-api\1.28\kumo-api-1.28.jar;C:\Users\LEGION\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\LEGION\.m2\repository\org\jsoup\jsoup\1.12.1\jsoup-1.12.1.jar;C:\Users\LEGION\.m2\repository\commons-io\commons-io\2.4\commons-io-2.4.jar;C:\Users\LEGION\.m2\repository\org\apache\commons\commons-lang3\3.4\commons-lang3-3.4.jar;C:\Users\LEGION\.m2\repository\com\github\davidmoten\rtree\0.8.6\rtree-0.8.6.jar;C:\Users\LEGION\.m2\repository\com\github\davidmoten\guava-mini\0.1.1\guava-mini-0.1.1.jar;C:\Users\LEGION\.m2\repository\io\reactivex\rxjava\1.3.8\rxjava-1.3.8.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\LEGION"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-01-17"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-19"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="d:\dsa\NJIT-DSA-2024-origin\07-booksandwords"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\LEGION\AppData\Local\Temp\surefire9374324729000978871\surefirebooter787073874696689375.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="19.0.2+7-44"/>
+    <property name="user.name" value="LEGION"/>
+    <property name="stdout.encoding" value="GBK"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\LEGION\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\LEGION\AppData\Local\Temp\"/>
+    <property name="java.version" value="19.0.2"/>
+    <property name="user.dir" value="d:\dsa\NJIT-DSA-2024-origin\07-booksandwords"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="GBK"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-19\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32;C:\Program Files\Java\jdk-19\bin;D:\CodeBlocks\MinGW\bin;C:\Users\LEGION\AppData\Local\Microsoft\WindowsApps;D:\IDEA\IntelliJ IDEA Community Edition 2023.3.5\bin;;D:\Microsoft VS Code\bin;C:\Program Files\MySQL\MySQL Server 8.1\bin;C:\Windows\System32;C:\Program Files (x86)\Nmap;D:\maven\apache-maven-3.9.6\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="GBK"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="19.0.2+7-44"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="63.0"/>
+  </properties>
+  <testcase name="testSapmiRussianFile" classname="oy.tol.tira.books.CorrectnessTests" time="0.019">
+    <error message="Cannot invoke &quot;java.net.URL.getFile()&quot; because the return value of &quot;java.lang.ClassLoader.getResource(String)&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.net.URL.getFile()" because the return value of "java.lang.ClassLoader.getResource(String)" is null
+	at oy.tol.tira.books.CorrectnessTests.getFullPathToTestFile(CorrectnessTests.java:268)
+	at oy.tol.tira.books.CorrectnessTests.testSapmiRussianFile(CorrectnessTests.java:161)
+</error>
+    <system-out><![CDATA[Starting to test sapmirussian.txt...
+]]></system-out>
+  </testcase>
+  <testcase name="testSmallFile" classname="oy.tol.tira.books.CorrectnessTests" time="0.004">
+    <failure message="Test failed due to exception: Cannot invoke &quot;java.net.URL.getFile()&quot; because the return value of &quot;java.lang.ClassLoader.getResource(String)&quot; is null" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Test failed due to exception: Cannot invoke "java.net.URL.getFile()" because the return value of "java.lang.ClassLoader.getResource(String)" is null
+	at oy.tol.tira.books.CorrectnessTests.testSmallFile(CorrectnessTests.java:153)
+</failure>
+    <system-out><![CDATA[Starting to test small.txt...
+]]></system-out>
+  </testcase>
+  <testcase name="testFilesNotGiven" classname="oy.tol.tira.books.CorrectnessTests" time="0.003"/>
+  <testcase name="testBulkFile" classname="oy.tol.tira.books.CorrectnessTests" time="0.001">
+    <error message="Cannot invoke &quot;java.net.URL.getFile()&quot; because the return value of &quot;java.lang.ClassLoader.getResource(String)&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.net.URL.getFile()" because the return value of "java.lang.ClassLoader.getResource(String)" is null
+	at oy.tol.tira.books.CorrectnessTests.getFullPathToTestFile(CorrectnessTests.java:268)
+	at oy.tol.tira.books.CorrectnessTests.testBulkFile(CorrectnessTests.java:233)
+</error>
+    <system-out><![CDATA[Starting to test Bulk.txt...
+]]></system-out>
+  </testcase>
+  <testcase name="testWarPeaceFile" classname="oy.tol.tira.books.CorrectnessTests" time="0.001">
+    <error message="Cannot invoke &quot;java.net.URL.getFile()&quot; because the return value of &quot;java.lang.ClassLoader.getResource(String)&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.net.URL.getFile()" because the return value of "java.lang.ClassLoader.getResource(String)" is null
+	at oy.tol.tira.books.CorrectnessTests.getFullPathToTestFile(CorrectnessTests.java:268)
+	at oy.tol.tira.books.CorrectnessTests.testWarPeaceFile(CorrectnessTests.java:197)
+</error>
+    <system-out><![CDATA[Starting to test WarPeace.txt...
+]]></system-out>
+  </testcase>
+  <testcase name="testEmptyBookFile" classname="oy.tol.tira.books.CorrectnessTests" time="0.001">
+    <error message="Cannot invoke &quot;java.net.URL.getFile()&quot; because the return value of &quot;java.lang.ClassLoader.getResource(String)&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.net.URL.getFile()" because the return value of "java.lang.ClassLoader.getResource(String)" is null
+	at oy.tol.tira.books.CorrectnessTests.getFullPathToTestFile(CorrectnessTests.java:268)
+	at oy.tol.tira.books.CorrectnessTests.testEmptyBookFile(CorrectnessTests.java:44)
+</error>
+    <system-out><![CDATA[Starting to test emptybook.txt...
+]]></system-out>
+  </testcase>
+  <testcase name="testTinyBookFile" classname="oy.tol.tira.books.CorrectnessTests" time="0.001">
+    <error message="Cannot invoke &quot;java.net.URL.getFile()&quot; because the return value of &quot;java.lang.ClassLoader.getResource(String)&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.net.URL.getFile()" because the return value of "java.lang.ClassLoader.getResource(String)" is null
+	at oy.tol.tira.books.CorrectnessTests.getFullPathToTestFile(CorrectnessTests.java:268)
+	at oy.tol.tira.books.CorrectnessTests.testTinyBookFile(CorrectnessTests.java:98)
+</error>
+    <system-out><![CDATA[Starting to test tiny.txt...
+]]></system-out>
+  </testcase>
+  <testcase name="testNonExistentBookFile" classname="oy.tol.tira.books.CorrectnessTests" time="0.001"/>
+  <testcase name="testOneWordBookFile" classname="oy.tol.tira.books.CorrectnessTests" time="0.001">
+    <error message="Cannot invoke &quot;java.net.URL.getFile()&quot; because the return value of &quot;java.lang.ClassLoader.getResource(String)&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke "java.net.URL.getFile()" because the return value of "java.lang.ClassLoader.getResource(String)" is null
+	at oy.tol.tira.books.CorrectnessTests.getFullPathToTestFile(CorrectnessTests.java:268)
+	at oy.tol.tira.books.CorrectnessTests.testOneWordBookFile(CorrectnessTests.java:66)
+</error>
+    <system-out><![CDATA[Starting to test word.txt...
+]]></system-out>
+  </testcase>
+</testsuite>
