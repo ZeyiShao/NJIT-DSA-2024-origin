@@ -30,21 +30,14 @@ public class Person implements Comparable<Person> {
     public String toString() {
         return getFullName();
     }
-
-    /**
-     * TODO: Implement the method below to return a hash value. It must be calculated from the
-     * first and last name of the person.
-     * 
-     * @return Hash value of the person.
-     */
-
-     
     @Override
     public int hashCode() {
-        
-        // Implement hash function here.
-        return getFullName().hashCode();
-       
+        int hash=0;
+        String hashString=firstName+lastName;
+        for (int i = 0; i < hashString.length(); i++) {
+            hash=37*hash+hashString.charAt(i);
+        }
+        return hash;
     }
 
     @Override
