@@ -17,8 +17,9 @@ public class QueueImplementation<E> implements QueueInterface<E> {
         if (capacity < 2) {
             throw new QueueAllocationException("Capacity must be at least 2.");
         }
-        this.capacity = capacity;
-        this.itemArray = new Object[capacity];
+        else{
+            itemArray=new Object[capacity];
+            this.capacity=capacity;}
     }
 
     @Override
@@ -28,22 +29,33 @@ public class QueueImplementation<E> implements QueueInterface<E> {
 
     @Override
     public void enqueue(E element) throws QueueAllocationException, NullPointerException {
-        ensureCapacity();
-        if (element == null) {
-            throw new NullPointerException();
+        if(current==capacity){
+            Object[] tmp=new Object[this.capacity*2+1];
+            int indexOfItemArray=head;
+            int indexOfTmp=0;
+            int loopTime=current;
+            while(loopTime-->0){
+                tmp[indexOfTmp++]=itemArray[indexOfItemArray];
+                indexOfItemArray=(indexOfItemArray+1)%capacity;
+            }
+            head=0;
+            tail=indexOfTmp-1;
+            itemArray=tmp;
+            tmp=null;
+            capacity=capacity*2+1;
+         }
+        else if(element==null){
+           throw new NullPointerException();
         }
-        tail = (tail + 1) % capacity;
-        itemArray[tail] = element;
-        current++;
+        tail=(tail+1)%capacity;
+        itemArray[tail]=element;
+        current++; 
     }
 
     @Override
     public E dequeue() throws QueueIsEmptyException {
-        if (isEmpty()) {
-            throw new QueueIsEmptyException("Cannot dequeue from an empty queue.");
-        }
-        E returnE = element();
-        head = (head + 1) % capacity;
+        E returnE =element();
+        head=(head+1)%capacity;
         current--;
         return returnE;
     }
@@ -53,8 +65,8 @@ public class QueueImplementation<E> implements QueueInterface<E> {
     public E element() throws QueueIsEmptyException {
         if (isEmpty()) {
             throw new QueueIsEmptyException("Cannot dequeue from an empty queue.");
-        }
-        return (E) itemArray[head];
+        }else
+        {return (E) itemArray[head];}
     }
 
     @Override
@@ -77,14 +89,15 @@ public class QueueImplementation<E> implements QueueInterface<E> {
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder("[");
-        int index = head;
-        int loopTime = current;
-        while (loopTime-- > 0) {
-            builder.append(itemArray[index].toString());
-            index = (index + 1) % capacity;
-            if (loopTime != 0) {
-                builder.append(", ");
-            }
+        if (!isEmpty()) {
+            int index = head;
+            do {
+                builder.append(itemArray[index].toString());
+                if (index != tail) {
+                    builder.append(", ");
+                }
+                index = (index + 1) % capacity;
+            } while (index != (tail + 1) % capacity);
         }
         builder.append("]");
         return builder.toString();
